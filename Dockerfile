@@ -1,5 +1,5 @@
 FROM scratch
-ARG TARGET
+ARG $TARGETPLATFORM
 ARG VERSION
-COPY ./${TARGET}/renvsubst /renvsubst
+COPY ./${$TARGETPLATFORM}/renvsubst /renvsubst
 ENTRYPOINT ["/renvsubst"]
