@@ -116,7 +116,7 @@ jobs:
       - name: Download binary artifact arm
         uses: actions/download-artifact@v4
         with:
-          name: renvsubst-v${{ env.PROJECT_VERSION }}-arm-aarch64-unknown-linux-musl.tar.gz
+          name: renvsubst-v${{ env.PROJECT_VERSION }}-arm-aarch64-unknown-linux-musleabihf.tar.gz
       - name: Untar
         run: |
           tar -xvf renvsubst-v${{ env.PROJECT_VERSION }}-x86_64-unknown-linux-musl.tar.gz            renvsubst-v${{ env.PROJECT_VERSION }}-x86_64-unknown-linux-musl            --transform 's|renvsubst-v${{ env.PROJECT_VERSION }}-x86_64-unknown-linux-musl|linux/amd64|'
